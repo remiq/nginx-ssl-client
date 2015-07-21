@@ -1,0 +1,13 @@
+
+nginx:
+  image: nginx:1.9
+  ports:
+    - "8443:443"
+    - "8080:80"
+  volumes:
+    - web:/usr/share/nginx/html
+    - nginx:/etc/nginx/conf.d
+    - certs:/etc/nginx/certs
+
+
+
